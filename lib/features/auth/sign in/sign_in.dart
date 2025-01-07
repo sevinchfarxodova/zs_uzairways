@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SignIn extends StatelessWidget {
+  const SignIn({super.key});
 
   @override
   Widget build(BuildContext context) {
-   return Placeholder();
+    return  Placeholder();
   }
 }
-
