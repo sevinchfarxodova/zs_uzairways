@@ -1,5 +1,7 @@
 class RouteNames{
-  static const String introPage='/intro_page';
+  static const String introPage1='/intro_page1';
+  static const String introPage2='/intro_page2';
+  static const String introPage3='/intro_page3';
   static const String signIn='/signIn';
   static const String signInEmail='/signInEmail';
   static const String signInPassword='/signInPassword';
