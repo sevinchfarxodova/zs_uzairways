@@ -8,10 +8,9 @@ class Card extends StatelessWidget {
     return  Container(
       child: Column(
         children: [
-          Image.asset('assets/images/card.png'),
           Row(
             children: [
-              Text('GTH'),
+              Image.asset('assets/images/')
             ],
           )
         ],

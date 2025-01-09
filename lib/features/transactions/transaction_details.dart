@@ -35,7 +35,8 @@ class TransactionDetails extends StatelessWidget {
           SizedBox(
             height: 22,
           ),
-          Card()
+          Card(),
+
         ],
       ),
       ),
