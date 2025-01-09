@@ -16,9 +16,9 @@ class Textfield extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),
-            spreadRadius: 2, // Spread radius
-            blurRadius: 2, // Blur radius
-            offset: Offset(0, 1), // Changes the position of the shadow
+            spreadRadius: 2,
+            blurRadius: 2,
+            offset: Offset(0, 1),
           ),
         ],
       ),
@@ -29,7 +29,7 @@ class Textfield extends StatelessWidget {
           ),
           decoration: InputDecoration(
             filled: true,
-            fillColor: Colors.transparent, // Make the fill color transparent
+            fillColor: Colors.transparent,
             labelText: text,
             border: InputBorder.none,
           ),

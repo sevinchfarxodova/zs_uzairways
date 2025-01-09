@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:zs_airways/features/transactions/widgets/card.dart';
 
 import '../../core/constants/colors.dart';
 import '../auth/widgets/arrow.dart';
@@ -35,8 +36,92 @@ class TransactionDetails extends StatelessWidget {
           SizedBox(
             height: 22,
           ),
-          Card(),
-
+          MyCard(),
+          SizedBox(height: 14,),
+          Column(
+            children: [
+              Row(
+              children: [
+                Text(
+                  'Status',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: AppColors.grey
+                  ),
+                ),
+                SizedBox(
+                  width: 80,
+                ),
+                Text(
+                  'Success',
+                  style: TextStyle(fontSize: 12,
+                      color: AppColors.blue),
+                ),
+              ],
+              ),
+              SizedBox(height: 16,),
+              Row(
+                children: [
+                  Text(
+                    'Invoice',
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: AppColors.grey
+                    ),
+                  ),
+                  SizedBox(
+                    width: 80,
+                  ),
+                  Text(
+                    'INV23124131332',
+                    style: TextStyle(fontSize: 12,
+                        color: AppColors.black),
+                  ),
+                ],
+              ),
+              SizedBox(height: 16,),
+              Row(
+                children: [
+                  Text(
+                    'Transaction Date',
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: AppColors.grey
+                    ),
+                  ),
+                  SizedBox(
+                    width: 80,
+                  ),
+                  Text(
+                    'Wed, 18 Oct 2024',
+                    style: TextStyle(fontSize: 12,
+                        color: AppColors.black),
+                  ),
+                ],
+              ),
+              SizedBox(height: 16,),
+              Row(
+                children: [
+                  Text(
+                    'Payment Method',
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: AppColors.grey
+                    ),
+                  ),
+                  SizedBox(
+                    width: 90,
+                  ),
+                  Text(
+                    'Paytren',
+                    style: TextStyle(fontSize: 12,
+                        color: AppColors.blue),
+                  ),
+                ],
+              ),
+              SizedBox(height: 16,),
+            ],
+          )
         ],
       ),
       ),
