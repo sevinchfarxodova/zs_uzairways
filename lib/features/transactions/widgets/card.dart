@@ -10,7 +10,12 @@ class Card extends StatelessWidget {
         children: [
           Row(
             children: [
-              Image.asset('assets/images/')
+              Image.asset('assets/images/'),
+              SizedBox(width: 4,),
+              Text('Southwest Airlines',style: TextStyle(
+                fontSize: 14,
+
+              ),)
             ],
           )
         ],
