@@ -9,6 +9,11 @@ class Card extends StatelessWidget {
       child: Column(
         children: [
           Image.asset('assets/images/card.png'),
+          Row(
+            children: [
+              Text('GTH'),
+            ],
+          )
         ],
       ),
     );
