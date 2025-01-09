@@ -14,10 +14,11 @@ class Arrow extends StatelessWidget {
         style: ElevatedButton.styleFrom(
         padding: EdgeInsets.zero,
 backgroundColor:AppColors.white,
-          minimumSize: Size(56, 36)
+          //minimumSize: Size(50, 36)
     ),
     onPressed:onPressed,
     child:Image.asset(imgUrl!,
+      color: Colors.black,
     height: 56,width: 36,
     ));
 }}
