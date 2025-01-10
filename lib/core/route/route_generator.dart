@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:zs_airways/core/route/route_names.dart';
 import 'package:zs_airways/features/intro_page/page1.dart';
 import 'package:zs_airways/features/intro_page/page3.dart';
+import 'package:zs_airways/features/payment_details/payment_details_page.dart';
 
 import '../../features/auth/sign in/sign_in.dart';
 import '../../features/intro_page/page2.dart';
@@ -22,7 +23,8 @@ class AppRoute{
         return MaterialPageRoute(builder: (_)=>  Page2());
       case RouteNames.introPage3:
     return MaterialPageRoute(builder: (_)=>  Page3());
-
+      case RouteNames.paymentDetails:
+        return MaterialPageRoute(builder: (_)=>  PaymentDetailsPage());
 
 
       default:

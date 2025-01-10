@@ -11,5 +11,6 @@ class RouteNames{
   static const String homePage='/homePage';
   static const String bottomNavBar='/bottomNavBar';
  static const String profilePage='/profilePage';
+  static const String paymentDetails='/paymentDetails';
 
 }

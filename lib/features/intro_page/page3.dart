@@ -4,6 +4,8 @@ import 'package:zs_airways/features/intro_page/widgets/button.dart';
 import 'package:zs_airways/features/intro_page/widgets/dots.dart';
 import 'package:zs_airways/features/intro_page/widgets/skip_button.dart';
 
+import '../../core/route/route_names.dart';
+
 class Page3 extends StatelessWidget {
   const Page3({super.key});
 
@@ -42,9 +44,13 @@ class Page3 extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                SkipButton(text: "Skip", onPressed: (){}),
+                SkipButton(text: "Skip", onPressed: (){
 
-                IntroButton(text: "Next", onPressed: (){}, img: "assets/images/arrow_circle_right.png"),
+                }),
+
+                IntroButton(text: "Next", onPressed: (){
+                  Navigator.pushNamed(context, RouteNames.paymentDetails);
+                }, img: "assets/images/arrow_circle_right.png"),
               ],
             )
           ],
