@@ -8,26 +8,28 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.1),
-            spreadRadius: 0,
+            spreadRadius: 2,
             blurRadius: 4,
             offset: Offset(0, 1),
           ),
         ],
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 16,),
           Row(
             children: [
               Image.asset('assets/images/logo1.png', color: Colors.black,),
               SizedBox(
-                width: 4,
+                width: 6,
               ),
               Text(
                 'Southwest Airlines',
@@ -36,7 +38,7 @@ class MyCard extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 75,
+                width: 85,
               ),
               Text(
                 'Executive',
@@ -53,7 +55,7 @@ class MyCard extends StatelessWidget {
         style: TextStyle(
           fontSize: 24,
         ),),
-        SizedBox(height: 5,),
+        SizedBox(height: 2,),
         Text('14.00',
           style: TextStyle(
             fontSize: 12,
@@ -61,20 +63,20 @@ class MyCard extends StatelessWidget {
           ),),
       ],
     ),
-    SizedBox(width: 75,),
+    SizedBox(width: 85,),
     ImageIcon(
       AssetImage("assets/images/plane.png"),
       color: Colors.blue,
       size: 22,
     ),
-    SizedBox(width: 75,),
+    SizedBox(width: 85,),
     Column(
       children: [
         Text('KHQ',
           style: TextStyle(
             fontSize: 24,
           ),),
-        SizedBox(height: 5,),
+        SizedBox(height: 2,),
         Text('07.15',
           style: TextStyle(
               fontSize: 12,
@@ -100,7 +102,7 @@ class MyCard extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 12
                 ),),
-              SizedBox(width: 60,),
+              SizedBox(width: 70,),
               Text('IDR 350.000 ',
                 style: TextStyle(
                     fontSize: 12
@@ -117,7 +119,7 @@ class MyCard extends StatelessWidget {
             children: [
               Image.asset('assets/images/Ellipse 21.png', color: Colors.black,),
               SizedBox(
-                width: 4,
+                width: 6,
               ),
               Text(
                 'Matt Murdock',
@@ -126,7 +128,7 @@ class MyCard extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 75,
+                width: 95,
               ),
               Text(
                 'Edit',
