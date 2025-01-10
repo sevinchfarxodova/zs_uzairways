@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+ zaynabxon
 import 'core/route/route_generator.dart';
 import 'core/route/route_names.dart';
 
@@ -16,4 +16,10 @@ class MyApp extends StatelessWidget {
    );
   }
 }
+import 'main.dart';
+import 'myApp.dart';
+ master
 
+void main() {
+  runApp( MyApp());
+}
