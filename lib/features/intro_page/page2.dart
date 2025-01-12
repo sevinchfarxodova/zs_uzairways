@@ -13,45 +13,47 @@ class Page2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.white,
-      body: Padding(
-        padding: const EdgeInsets.only(top: 75),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          // crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Image.asset("assets/images/intro2.png",
-              height: 450,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.only(top: 75),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Image.asset("assets/images/intro2.png",
+                height: 450,
 
-            ),
-            const SizedBox(height: 24),
-            const Text(
-              "Find \n"
-             "Your Perfect \n"
-              "Tickets To Fly",
-              textAlign: TextAlign.start,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 40,
-                fontWeight: FontWeight.bold,
+              ),
+              const SizedBox(height: 24),
+              const Text(
+                "Find \n"
+               "Your Perfect \n"
+                "Tickets To Fly",
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                ),
+
               ),
 
-            ),
 
+              const SizedBox(height: 24),
+              StaticDots(),
+              const SizedBox(height: 54),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  SkipButton(text: "Skip", onPressed: (){}),
 
-            const SizedBox(height: 24),
-            StaticDots(),
-            const SizedBox(height: 54),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                SkipButton(text: "Skip", onPressed: (){}),
-
-                IntroButton(text: "Next", onPressed: (){
-                  Navigator.pushNamed(context, RouteNames.introPage3);
-                }, img: "assets/images/arrow_circle_right.png"),
-              ],
-            )
-          ],
+                  IntroButton(text: "Next", onPressed: (){
+                    Navigator.pushNamed(context, RouteNames.introPage3);
+                  }, img: "assets/images/arrow_circle_right.png"),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

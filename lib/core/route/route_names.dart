@@ -8,7 +8,14 @@ class RouteNames{
   static const String paySuccessful='/paySuccessful';
   static const String tranDetails='/tranDetails';
 
-  static const String homePage='/homePage';
+  static const String searchFlights='/searchFlights';
+  static const String bookingDetail='/bookingDetail';
+  static const String contactDetail='/contactDetail';
+  static const String passengerInfo='/passengerInfo';
+  static const String selectSeats='/selectSeats';
+  static const String account='/account';
+
+
   static const String bottomNavBar='/bottomNavBar';
  static const String profilePage='/profilePage';
   static const String paymentDetails='/paymentDetails';

@@ -2,10 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zs_airways/core/route/route_names.dart';
 
+import '../../../core/constants/colors.dart';
+import '../../auth/widgets/arrow.dart';
 import 'widgets/button.dart';
-import '../../core/constants/colors.dart';
-import '../auth/widgets/arrow.dart';
-import '../auth/widgets/long_button.dart';
 
 class Passcode extends StatelessWidget {
   const Passcode({super.key});

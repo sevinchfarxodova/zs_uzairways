@@ -12,7 +12,7 @@ class LongButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.blue,
-        padding: const EdgeInsets.symmetric(horizontal: 326, vertical: 36),
+        minimumSize: Size(double.infinity, 56),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),
