@@ -26,15 +26,15 @@ class Account extends StatelessWidget {
                       Navigator.pushNamed(context, RouteNames.selectSeats);
                     },),
                     SizedBox(height: 12,),
-                    AccContainers(imgUrl: 'assets/images/tg.png', text: 'My Voucher', onPressed: () {
+                    AccContainers(imgUrl: 'assets/images/Group 3.png', text: 'My Voucher', onPressed: () {
                       Navigator.pushNamed(context, RouteNames.selectSeats);
                     },),
                     SizedBox(height: 12,),
-                    AccContainers(imgUrl: 'assets/images/tg.png', text: 'Payment Methods', onPressed: () {
+                    AccContainers(imgUrl: 'assets/images/credit_card.png', text: 'Payment Methods', onPressed: () {
                       Navigator.pushNamed(context, RouteNames.selectSeats);
                     },),
                     SizedBox(height: 12,),
-                    AccContainers(imgUrl: 'assets/images/tg.png', text: 'Invite Friends', onPressed: () {
+                    AccContainers(imgUrl: 'assets/images/Shape.png', text: 'Invite Friends', onPressed: () {
                       Navigator.pushNamed(context, RouteNames.selectSeats);
                     },),
                   ],
