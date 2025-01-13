@@ -17,7 +17,6 @@ class Account extends StatelessWidget {
         child: Expanded(
           child: Column(
             children: [
-
               ProfileCircle(),
               SizedBox(height: 12,),
 
