@@ -5,6 +5,7 @@ import 'package:zs_airways/features/account_page/widgets/acc_containers.dart';
 import 'package:zs_airways/features/account_page/widgets/profile_circle.dart';
 
 import '../../core/route/route_names.dart';
+import '../home_page/widgets/toogle_but.dart';
 
 class Account extends StatelessWidget {
   const Account({super.key});
@@ -16,34 +17,81 @@ class Account extends StatelessWidget {
         child: Expanded(
           child: Column(
             children: [
+
+              ProfileCircle(),
+              SizedBox(height: 12,),
+
+              // 4 containers
+              AccContainers(imgUrl: 'assets/images/tg.png', text: 'My Order', onPressed: () {
+                Navigator.pushNamed(context, RouteNames.selectSeats);
+              },),
+              SizedBox(height: 8,),
+              AccContainers(imgUrl: 'assets/images/Group 3.png', text: 'My Voucher', onPressed: () {
+                Navigator.pushNamed(context, RouteNames.selectSeats);
+              },),
+              SizedBox(height: 8,),
+              AccContainers(imgUrl: 'assets/images/credit_card.png', text: 'Payment Methods', onPressed: () {
+                Navigator.pushNamed(context, RouteNames.selectSeats);
+              },),
+              SizedBox(height: 8,),
+              AccContainers(imgUrl: 'assets/images/Shape.png', text: 'Invite Friends', onPressed: () {
+                Navigator.pushNamed(context, RouteNames.selectSeats);
+              },),
+              SizedBox(height: 8,),
+
+              // quick login
               Container(
-                padding: EdgeInsets.all(15),
-                child: Column(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(8),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.01),
+                      spreadRadius: 5,
+                    ),
+                  ],
+                ),
+
+                // log in
+                child:  Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ProfileCircle(),
-                    SizedBox(height: 12,),
-                    AccContainers(imgUrl: 'assets/images/tg.png', text: 'My Order', onPressed: () {
-                      Navigator.pushNamed(context, RouteNames.selectSeats);
-                    },),
-                    SizedBox(height: 12,),
-                    AccContainers(imgUrl: 'assets/images/Group 3.png', text: 'My Voucher', onPressed: () {
-                      Navigator.pushNamed(context, RouteNames.selectSeats);
-                    },),
-                    SizedBox(height: 12,),
-                    AccContainers(imgUrl: 'assets/images/credit_card.png', text: 'Payment Methods', onPressed: () {
-                      Navigator.pushNamed(context, RouteNames.selectSeats);
-                    },),
-                    SizedBox(height: 12,),
-                    AccContainers(imgUrl: 'assets/images/Shape.png', text: 'Invite Friends', onPressed: () {
-                      Navigator.pushNamed(context, RouteNames.selectSeats);
-                    },),
+                    Row(
+                        children:[
+                          Image.asset('assets/images/scaner_icon.png'),
+                          SizedBox(
+                              width:8
+                          ),
+                          Text('Quick Login',style: TextStyle(
+                              fontSize: 16,
+                              color: AppColors.black
+                          ),)
+                        ]
+                    ),
+                    ToogleBut(),
                   ],
                 ),
               ),
-            ],
-          ),
+              SizedBox(height: 22,),
+
+              //order
+              AccContainers(imgUrl: 'assets/images/Navigation.png', text: 'My Order', onPressed: () {
+                Navigator.pushNamed(context, RouteNames.selectSeats);
+              },),
+              SizedBox(height: 4,),
+              AccContainers(imgUrl: 'assets/images/settings.png', text: 'Settings', onPressed: () {
+                Navigator.pushNamed(context, RouteNames.selectSeats);
+              },),
+
+              //log out
+              SizedBox(height: 22,),
+              AccContainers(imgUrl: 'assets/images/logout.png', text: 'Log Out', onPressed: () {
+                Navigator.pushNamed(context, RouteNames.selectSeats);
+              },)
+      ]
         ),
       ),
-    );
+      ), );
   }
 }
