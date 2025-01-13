@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:zs_airways/features/transactions/widgets/button.dart';
-import 'package:zs_airways/features/transactions/widgets/card.dart';
-import 'package:zs_airways/features/transactions/widgets/red_button.dart';
-
-import '../../core/constants/colors.dart';
-import '../auth/widgets/arrow.dart';
+import 'package:zs_airways/features/payment_details/transactions/widgets/button.dart';
+import 'package:zs_airways/features/payment_details/transactions/widgets/card.dart';
+import 'package:zs_airways/features/payment_details/transactions/widgets/red_button.dart';
+import '../../../core/constants/colors.dart';
+import '../../auth/widgets/arrow.dart';
 
 class TransactionDetails extends StatelessWidget {
   const TransactionDetails({super.key});
@@ -45,6 +44,7 @@ class TransactionDetails extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'Status',
@@ -65,6 +65,7 @@ class TransactionDetails extends StatelessWidget {
                 ),
                 SizedBox(height: 16,),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'Invoice',
@@ -85,6 +86,7 @@ class TransactionDetails extends StatelessWidget {
                 ),
                 SizedBox(height: 16,),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'Transaction Date',
@@ -105,6 +107,7 @@ class TransactionDetails extends StatelessWidget {
                 ),
                 SizedBox(height: 16,),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'Payment Method',
@@ -159,7 +162,6 @@ class TransactionDetails extends StatelessWidget {
                     ),
                   ],
                 ),
-
               ],
             ),
             SizedBox(height: 24,),

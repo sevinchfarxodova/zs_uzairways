@@ -1,19 +1,18 @@
-
 import 'package:flutter/material.dart';
 import 'package:zs_airways/core/constants/colors.dart';
-class PaymentButton extends StatelessWidget {
+class GreyButton extends StatelessWidget {
   String? text;
   final VoidCallback onPressed;
   String? img;
-  PaymentButton({super.key, required this.text, required this.onPressed, required this.img});
+  GreyButton({super.key, required this.text, required this.onPressed, required this.img});
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.blue,
-        padding: const EdgeInsets.symmetric(horizontal: 34, vertical: 20),
+        backgroundColor: Color(0xfF2F3F6),
+        minimumSize: Size(double.infinity, 48),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),
@@ -21,19 +20,21 @@ class PaymentButton extends StatelessWidget {
       child:  Row(
         mainAxisSize: MainAxisSize.min,
         children: [
+          Image.asset(img!,
+            height: 18,
+            width: 18,
+          color: AppColors.blue,),
+          const SizedBox(width: 8),
           Text(
             text!,
             style: const TextStyle(
-              color: Colors.white,
-              fontSize: 14,
+              color: Colors.black, // Text color
+              fontSize: 16, // Font size
             ),
           ),
-          const SizedBox(width: 8),
-          Image.asset(img!,
-            height: 24,
-            width: 24,)
         ],
       ),
     );
+
   }
 }

@@ -20,93 +20,95 @@ class PaymentDetailsPage extends StatelessWidget {
           imgUrl: "assets/images/arrow_left.png",
         ),
       ),
-      body: Container(
-        padding: EdgeInsets.all(15),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Digital payment method(s)",
-              textAlign: TextAlign.start,
-              style: TextStyle(
-                fontSize: 24,
-                color: AppColors.black,
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(15),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Digital payment method(s)",
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                  fontSize: 24,
+                  color: AppColors.black,
+                ),
               ),
-            ),
-            SizedBox(height: 10),
-            Text(
-              "Swipe left to set your default method",
-              textAlign: TextAlign.start,
-              style: TextStyle(
-                fontSize: 16,
-                color: AppColors.grey,
+              SizedBox(height: 10),
+              Text(
+                "Swipe left to set your default method",
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: AppColors.grey,
+                ),
               ),
-            ),
-            SizedBox(height: 20),
-            Checker(
-              text1: "***8976",
-              text2: "Get 10\$ Discount",
-              imgurl: "assets/images/card.png",
-              icon1: "assets/images/success2.png",
-              icon2: "assets/images/check.png",
-            ),
-            SizedBox(height: 20),
-            const Divider(
-              color: Colors.grey,
-              thickness: 0.5,
-            ),
-            SizedBox(height: 20),
-            Checker(
-              text1: "Paypal",
-              text2: "Get 10\$ Discount",
-              imgurl: "assets/images/paypal.png",
-              icon1: "assets/images/success2.png",
-              icon2: "assets/images/circle.png",
-            ),
-            SizedBox(height: 30),
-            Text(
-              "Add methods",
-              style: TextStyle(fontSize: 24, color: AppColors.black),
-            ),
-            SizedBox(height: 20),
-            Method(
-              text1: "Credit or debit card",
-              text2: "Get 10\$ Discount",
-              text3: "Visa, Mastercard, AMEX and JCB",
-              imgurl: "assets/images/cardd.png",
-              icon1: "assets/images/success2.png",
-              add: "Add",
-            ),
-            SizedBox(height: 20),
-            const Divider(
-              color: Colors.grey,
-              thickness: 0.5,
-            ),
-            SizedBox(height: 15),
-            Method(
-              text1: "Tranfer",
-              text2: "Get 10\$ Discount",
-              text3: "Transferring via ATM, Internet \n"
-                  "Banking & Mobile Banking",
-              imgurl: "assets/images/refund.png",
-              icon1: "assets/images/success2.png",
-              add: "Add",
-            ),
-            const SizedBox(height: 140),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                SubtotalWidget(),
-                PaymentButton(
-                  text: "Proceed The Payment",
-                  onPressed: () {
-                    showBottomSheet(context);
-                  },
-                  img: "assets/images/check_circle.png",
-                )
-              ],
-            ),
-          ],
+              SizedBox(height: 20),
+              Checker(
+                text1: "***8976",
+                text2: "Get 10\$ Discount",
+                imgurl: "assets/images/card.png",
+                icon1: "assets/images/success2.png",
+                icon2: "assets/images/check.png",
+              ),
+              SizedBox(height: 20),
+              const Divider(
+                color: Colors.grey,
+                thickness: 0.5,
+              ),
+              SizedBox(height: 20),
+              Checker(
+                text1: "Paypal",
+                text2: "Get 10\$ Discount",
+                imgurl: "assets/images/paypal.png",
+                icon1: "assets/images/success2.png",
+                icon2: "assets/images/circle.png",
+              ),
+              SizedBox(height: 30),
+              Text(
+                "Add methods",
+                style: TextStyle(fontSize: 24, color: AppColors.black),
+              ),
+              SizedBox(height: 20),
+              Method(
+                text1: "Credit or debit card",
+                text2: "Get 10\$ Discount",
+                text3: "Visa, Mastercard, AMEX and JCB",
+                imgurl: "assets/images/cardd.png",
+                icon1: "assets/images/success2.png",
+                add: "Add",
+              ),
+              SizedBox(height: 20),
+              const Divider(
+                color: Colors.grey,
+                thickness: 0.5,
+              ),
+              SizedBox(height: 15),
+              Method(
+                text1: "Tranfer",
+                text2: "Get 10\$ Discount",
+                text3: "Transferring via ATM, Internet \n"
+                    "Banking & Mobile Banking",
+                imgurl: "assets/images/refund.png",
+                icon1: "assets/images/success2.png",
+                add: "Add",
+              ),
+              const SizedBox(height: 140),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  SubtotalWidget(),
+                  PaymentButton(
+                    text: "Proceed The Payment",
+                    onPressed: () {
+                      showBottomSheet(context);
+                    },
+                    img: "assets/images/check_circle.png",
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

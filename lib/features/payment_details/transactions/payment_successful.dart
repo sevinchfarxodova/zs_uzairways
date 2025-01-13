@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zs_airways/core/route/route_names.dart';
 
-import '../../core/constants/colors.dart';
+import '../../../core/constants/colors.dart';
 
 class PaymentSuccessful extends StatelessWidget {
   const PaymentSuccessful({super.key});
