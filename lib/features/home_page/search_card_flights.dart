@@ -14,9 +14,9 @@ class SearchCardFlights extends StatelessWidget {
       backgroundColor: Colors.blue,
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(14),
+          padding: EdgeInsets.all(20),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Row(
                   children: [
@@ -38,7 +38,7 @@ class SearchCardFlights extends StatelessWidget {
               ),
               SizedBox(height: 30,),
               SearchCard(),
-              SizedBox(height: 24,),
+              SizedBox(height: 12,),
               SearchCard(),
               SizedBox(height: 24,),
               SearchCard(),
