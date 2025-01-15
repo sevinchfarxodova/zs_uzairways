@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zs_airways/core/route/route_names.dart';
+import 'package:zs_airways/features/account_page/delete_account.dart';
 import 'package:zs_airways/features/account_page/setting_confirm_pin.dart';
 import 'package:zs_airways/features/account_page/setting_pin.dart';
+import 'package:zs_airways/features/account_page/widgets/confirm_pin_bottom.dart';
 import 'package:zs_airways/features/home_page/contact_details.dart';
 import 'package:zs_airways/features/home_page/passenger_info.dart';
 import 'package:zs_airways/features/home_page/search_card_flights.dart';
@@ -62,6 +64,11 @@ class AppRoute{
         return MaterialPageRoute(builder: (_)=>  SettingPin());
       case RouteNames.settingConfirmPin:
         return MaterialPageRoute(builder: (_)=>  SettingConfirmPin());
+      case RouteNames.confirmPinBottom:
+        return MaterialPageRoute(builder: (_)=>  ConfirmPinBottom());
+      case RouteNames.deleteAccount:
+        return MaterialPageRoute(builder: (_)=>  DeleteAccount());
+
 
 
       default:

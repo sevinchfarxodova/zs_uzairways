@@ -63,7 +63,7 @@ class SettingPin extends StatelessWidget {
                   passcodes('-'),
                 ],
               ),
-              SizedBox(height: 16,),
+              SizedBox(height: 36,),
               Button(text: 'Enter', onPressed: (){
                 Navigator.pushNamed(context, RouteNames.settingConfirmPin);
               },)

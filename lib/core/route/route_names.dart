@@ -16,6 +16,8 @@ class RouteNames{
   static const String account='/account';
   static const String settingPin='/settingPin';
   static const String settingConfirmPin='/settingConfirmPin';
+  static const String confirmPinBottom='/confirmPinBottom';
+  static const String deleteAccount='/deleteAccount';
 
 
   static const String bottomNavBar='/bottomNavBar';

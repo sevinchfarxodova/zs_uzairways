@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:zs_airways/features/home_page/widgets/verify_email_sheet.dart';
+import 'package:zs_airways/features/account_page/widgets/verify_email_sheet.dart';
 
 import '../../core/constants/colors.dart';
 import '../../core/route/route_names.dart';
@@ -17,85 +17,64 @@ class SettingConfirmPin extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.only(left: 20, right: 20),
         child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Arrow(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                imgUrl: "assets/images/arrow_forward_ios.png",
+          //mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Arrow(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              imgUrl: "assets/images/arrow_forward_ios.png",
+            ),
+            SizedBox(height: 22),
+            Text(
+              'Confirm '
+                  '\nyour PIN',
+              style: TextStyle(
+                  color: AppColors.black,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 14),
+            Text(
+              'Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.',
+              style: TextStyle(
+                color: AppColors.grey,
+                fontSize: 14,
               ),
-              SizedBox(
-                height: 22,
-              ),
-              Text(
-                'Confirm '
-                '\nyour PIN',
-                style: TextStyle(
-                    color: AppColors.black,
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: 14,
-              ),
-              Text(
-                'Enter 6 digits number for your PIN. Make sure the combination is not easy to guess.',
-                style: TextStyle(
-                  color: AppColors.grey,
-                  fontSize: 14,
-                ),
-              ),
-              SizedBox(
-                height: 14,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  passcodes('4'),
-                  SizedBox(
-                    width: 6,
-                  ),
-                  passcodes('6'),
-                  SizedBox(
-                    width: 6,
-                  ),
-                  passcodes('1'),
-                  SizedBox(
-                    width: 6,
-                  ),
-                  passcodes('-'),
-                  SizedBox(
-                    width: 6,
-                  ),
-                  passcodes('-'),
-                  SizedBox(
-                    width: 6,
-                  ),
-                  passcodes('-'),
-                ],
-              ),
-              SizedBox(
-                height: 8,
-              ),
-              GestureDetector(
-                onTap: () {
-                  showModalBottomSheet(
-                      context: context,
-                      builder: (BuildContext context) {
-                        return VerifyEmailSheet();
-                      });
-                  Button(
-                    text: 'Enter',
-                    onPressed: () {
-                      Navigator.pushNamed(
-                          context, RouteNames.settingConfirmPin);
-                    },
-                  );
-                },
-              ),
-            ]),
+            ),
+            SizedBox(height: 14),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                passcodes('4'),
+                SizedBox(width: 6),
+                passcodes('6'),
+                SizedBox(width: 6),
+                passcodes('1'),
+                SizedBox(width: 6),
+                passcodes('-'),
+                SizedBox(width: 6),
+                passcodes('-'),
+                SizedBox(width: 6),
+                passcodes('-'),
+              ],
+            ),
+            SizedBox(height: 25),
+            Button(
+              text: 'Enter',
+              onPressed: () {
+                showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return VerifyEmailSheet();
+                  },
+                );
+               // Navigator.pushNamed(context, RouteNames.settingConfirmPin);
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -109,16 +88,14 @@ class SettingConfirmPin extends StatelessWidget {
           borderRadius: BorderRadius.circular(4),
         ),
       ),
-      onPressed: () {},
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text(
-            numb,
-            style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-          )
-        ],
+      onPressed: () {
+        // Handle passcode input here, if necessary
+      },
+      child: Center(
+        child: Text(
+          numb,
+          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+        ),
       ),
     );
   }
