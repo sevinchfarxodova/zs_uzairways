@@ -4,7 +4,7 @@ class LongButton extends StatelessWidget {
   String? text;
   final VoidCallback onPressed;
   String? img;
-  LongButton({super.key, required this.text, required this.onPressed, required this.img});
+  LongButton({super.key, required this.text, required this.onPressed, this.img});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class LongButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.blue,
-        minimumSize: Size(double.infinity, 56),
+        padding: const EdgeInsets.symmetric(horizontal: 26, vertical: 36),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),

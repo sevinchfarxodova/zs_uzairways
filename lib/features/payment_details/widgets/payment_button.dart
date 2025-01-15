@@ -13,7 +13,7 @@ class PaymentButton extends StatelessWidget {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.blue,
-        padding: const EdgeInsets.symmetric(horizontal: 34, vertical: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 34, vertical: 12),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
         ),

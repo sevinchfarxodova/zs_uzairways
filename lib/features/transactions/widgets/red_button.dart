@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/constants/colors.dart';
+
 class RedButton extends StatelessWidget  {
   String? text;
   final VoidCallback onPressed;
@@ -18,23 +20,21 @@ class RedButton extends StatelessWidget  {
           borderRadius: BorderRadius.circular(8),
         ),
       ),
-      child:  Center(
-        child: Row(
-        //  mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              text!,
-              style: const TextStyle(
-                color: Colors.red, // Text color
-                fontSize: 16, // Font size
-              ),
+      child:  Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            text!,
+            style: const TextStyle(
+              color: Colors.red, // Text color
+              fontSize: 16, // Font size
             ),
-            const SizedBox(width: 8),
-            Image.asset(img!,
-              height: 18,
-              width: 18,),
-          ],
-        ),
+          ),
+          const SizedBox(width: 8),
+          Image.asset(img!,
+            height: 18,
+            width: 18,),
+        ],
       ),
     );
 

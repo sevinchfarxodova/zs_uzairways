@@ -22,12 +22,10 @@ class MyCard extends StatelessWidget {
         ],
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(height: 16,),
-          // airlines
           Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset('assets/images/logo1.png', color: Colors.black,),
               SizedBox(
@@ -40,7 +38,7 @@ class MyCard extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 220,
+                width: 85,
               ),
               Text(
                 'Executive',
@@ -49,9 +47,7 @@ class MyCard extends StatelessWidget {
             ],
           ),
     SizedBox(height: 15,),
-          // gth,khq
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
   children: [
     Column(
       children: [
@@ -91,9 +87,7 @@ class MyCard extends StatelessWidget {
   ],
 ),
           SizedBox(height: 16,),
-         // premium
           Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset('assets/images/Vector (1).png'),
               SizedBox(width: 8,),
@@ -108,7 +102,7 @@ class MyCard extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 12
                 ),),
-              SizedBox(width: 195,),
+              SizedBox(width: 70,),
               Text('IDR 350.000 ',
                 style: TextStyle(
                     fontSize: 12
@@ -121,9 +115,7 @@ class MyCard extends StatelessWidget {
             ],
           ),
           SizedBox(height: 18,),
-          //edit
           Row(
-            //mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Image.asset('assets/images/Ellipse 21.png', color: Colors.black,),
               SizedBox(
@@ -136,7 +128,7 @@ class MyCard extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 295,
+                width: 95,
               ),
               Text(
                 'Edit',

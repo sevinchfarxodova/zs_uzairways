@@ -24,7 +24,7 @@ class SignUp extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              imgUrl: "assets/images/arrow_forward_ios.png",
+              //imgUrl: "assets/images/arrow_forward_ios.png",
             ),
             SizedBox(
               height: 26,
@@ -101,6 +101,8 @@ class SignUp extends StatelessWidget {
                 ),
                 TextButton(
                     onPressed: () {
+                      Navigator.pushReplacementNamed(
+                          context, RouteNames.tranDetails);
                     },
                     child: Text(
                       'Sign Up',

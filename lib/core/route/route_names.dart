@@ -20,8 +20,15 @@ class RouteNames{
   static const String deleteAccount='/deleteAccount';
 
 
+  static const String homePage='/homePage';
   static const String bottomNavBar='/bottomNavBar';
  static const String profilePage='/profilePage';
   static const String paymentDetails='/paymentDetails';
-
+  static const String lastPage='/lastPage';
+  static const String searchFlight ='/searchFlight';
+  static const String settingsPage ='/settingsPage';
+  static const String languagePage ='/languagePage';
+  static const String notificationPage ='/notificationPage';
+  static const String emailandmobilePage ='/emailandmobilePage ';
+  static const String securitysetting ='/securitysetting ';
 }

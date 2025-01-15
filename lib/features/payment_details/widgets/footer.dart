@@ -16,7 +16,7 @@ class SubtotalWidget extends StatelessWidget {
             Text(
               'Subtotal',
               style: TextStyle(
-                fontSize: 12,
+                fontSize: 20,
                 color: AppColors.grey,
                 fontWeight: FontWeight.w400,
               ),
@@ -24,8 +24,8 @@ class SubtotalWidget extends StatelessWidget {
             SizedBox(width: 4),
             Icon(
               Icons.arrow_drop_down,
-              color: Colors.blue,
-              size: 16,
+              color: AppColors.blue,
+              size: 28,
             ),
           ],
         ),
