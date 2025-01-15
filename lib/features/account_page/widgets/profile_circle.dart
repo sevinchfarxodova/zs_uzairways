@@ -9,7 +9,6 @@ class ProfileCircle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-   //   width: double.infinity,
       height: 165,
       padding: EdgeInsets.all(18),
       decoration: BoxDecoration(

@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zs_airways/core/route/route_names.dart';
+import 'package:zs_airways/features/account_page/setting_confirm_pin.dart';
+import 'package:zs_airways/features/account_page/setting_pin.dart';
 import 'package:zs_airways/features/home_page/contact_details.dart';
 import 'package:zs_airways/features/home_page/passenger_info.dart';
-import 'package:zs_airways/features/home_page/search_flights.dart';
+import 'package:zs_airways/features/home_page/search_card_flights.dart';
 import 'package:zs_airways/features/home_page/select_seat.dart';
 
 import 'package:zs_airways/features/intro_page/page1.dart';
@@ -44,8 +46,8 @@ class AppRoute{
         return MaterialPageRoute(builder: (_)=>  PaymentSuccessful());
       case RouteNames.tranDetails:
         return MaterialPageRoute(builder: (_)=>  TransactionDetails());
-      case RouteNames.searchFlights:
-        return MaterialPageRoute(builder: (_)=>  SearchFlights());
+      case RouteNames.searchCardFlights:
+        return MaterialPageRoute(builder: (_)=>  SearchCardFlights());
       case RouteNames.bookingDetail:
         return MaterialPageRoute(builder: (_)=>  BookingDetail());
       case RouteNames.contactDetail:
@@ -56,6 +58,10 @@ class AppRoute{
         return MaterialPageRoute(builder: (_)=>  SelectSeat());
       case RouteNames.account:
         return MaterialPageRoute(builder: (_)=>  Account());
+      case RouteNames.settingPin:
+        return MaterialPageRoute(builder: (_)=>  SettingPin());
+      case RouteNames.settingConfirmPin:
+        return MaterialPageRoute(builder: (_)=>  SettingConfirmPin());
 
 
       default:
