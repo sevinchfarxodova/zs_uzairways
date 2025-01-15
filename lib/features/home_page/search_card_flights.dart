@@ -5,8 +5,14 @@ import 'package:zs_airways/features/home_page/widgets/search_card.dart';
 
 import '../auth/widgets/arrow.dart';
 import '../payment_details/transactions/widgets/card.dart';
-class SearchCardFlights extends StatelessWidget {
+class SearchCardFlights extends StatefulWidget {
    SearchCardFlights({super.key});
+
+  @override
+  State<SearchCardFlights> createState() => _SearchCardFlightsState();
+}
+
+class _SearchCardFlightsState extends State<SearchCardFlights> {
 
   @override
   Widget build(BuildContext context) {
