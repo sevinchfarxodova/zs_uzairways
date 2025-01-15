@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: RouteNames.selectSeats,
+      initialRoute: RouteNames.settingPin,
       onGenerateRoute: AppRoute(context: context).onGenerateRoute,
     );
   }
