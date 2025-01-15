@@ -23,7 +23,7 @@ class SignIn extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              imgUrl: "assets/images/arrow_forward_ios.png",
+              //imgUrl: "assets/images/arrow_forward_ios.png",
             ),
             SizedBox(
               height: 26,

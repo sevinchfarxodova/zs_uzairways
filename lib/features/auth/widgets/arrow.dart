@@ -4,21 +4,15 @@ import 'package:zs_airways/core/constants/colors.dart';
 
 class Arrow extends StatelessWidget {
   final VoidCallback onPressed;
-  final String? imgUrl;
 
-  Arrow({super.key, required this.onPressed, this.imgUrl});
+
+  Arrow({super.key, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-        style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.zero,
-          //minimumSize: Size(50, 36)
-    ),
-    onPressed:onPressed,
-    child:Image.asset(imgUrl!,
+    return IconButton(onPressed: onPressed, icon: const Icon(
+      Icons.arrow_back_ios,
       color: Colors.black,
-    height: 56,width: 25,
-
+      size: 24.0,
     ));
 }}

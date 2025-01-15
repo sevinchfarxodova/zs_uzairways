@@ -1,27 +1,31 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:zs_airways/core/route/route_names.dart';
-import 'package:zs_airways/features/home_page/contact_details.dart';
-import 'package:zs_airways/features/home_page/passenger_info.dart';
+import 'package:zs_airways/features/bottomnavbar/botNavBar.dart';
 import 'package:zs_airways/features/home_page/search_flights.dart';
-import 'package:zs_airways/features/home_page/select_seat.dart';
-
 import 'package:zs_airways/features/intro_page/page1.dart';
 import 'package:zs_airways/features/intro_page/page3.dart';
 import 'package:zs_airways/features/payment_details/payment_details_page.dart';
+import 'package:zs_airways/features/settings/emailnmobile_page.dart';
+import 'package:zs_airways/features/settings/language_page.dart';
+import 'package:zs_airways/features/settings/notification_page.dart';
+import 'package:zs_airways/features/settings/security_setting.dart';
+import 'package:zs_airways/features/settings/settings_page.dart';
+import 'package:zs_airways/features/transactions/widgets/last_page.dart';
 
-import '../../features/account_page/account.dart';
 import '../../features/auth/sign in/sign_in.dart';
-import '../../features/home_page/booking_detail.dart';
 import '../../features/intro_page/page2.dart';
 import 'package:zs_airways/features/auth/sign%20up/sign_up.dart';
+import 'package:zs_airways/features/transactions/payment_successful.dart';
+import 'package:zs_airways/features/transactions/transaction_details.dart';
+
 import '../../features/auth/sign in/sign_in.dart';
-import '../../features/payment_details/transactions/passcode.dart';
-import '../../features/payment_details/transactions/payment_successful.dart';
-import '../../features/payment_details/transactions/transaction_details.dart';
+import '../../features/transactions/passcode.dart';
+
 
 class AppRoute{
   BuildContext context;
+
   AppRoute({required this.context});
 
   Route onGenerateRoute(RouteSettings routeSettings){
@@ -36,6 +40,7 @@ class AppRoute{
     return MaterialPageRoute(builder: (_)=>  Page3());
       case RouteNames.paymentDetails:
         return MaterialPageRoute(builder: (_)=>  PaymentDetailsPage());
+
       case RouteNames.signUp:
         return MaterialPageRoute(builder: (_)=>  SignUp());
       case RouteNames.passcode:
@@ -44,20 +49,22 @@ class AppRoute{
         return MaterialPageRoute(builder: (_)=>  PaymentSuccessful());
       case RouteNames.tranDetails:
         return MaterialPageRoute(builder: (_)=>  TransactionDetails());
-      case RouteNames.searchFlights:
-        return MaterialPageRoute(builder: (_)=>  SearchFlights());
-      case RouteNames.bookingDetail:
-        return MaterialPageRoute(builder: (_)=>  BookingDetail());
-      case RouteNames.contactDetail:
-        return MaterialPageRoute(builder: (_)=>  ContactDetails());
-      case RouteNames.passengerInfo:
-        return MaterialPageRoute(builder: (_)=>  PassengerInfo());
-      case RouteNames.selectSeats:
-        return MaterialPageRoute(builder: (_)=>  SelectSeat());
-      case RouteNames.account:
-        return MaterialPageRoute(builder: (_)=>  Account());
-
-
+      case RouteNames.bottomNavBar:
+        return MaterialPageRoute(builder: (_)=>  BottomNavBar());
+      case RouteNames.lastPage:
+        return MaterialPageRoute(builder: (_)=>  LastPage());
+      case RouteNames.searchFlight:
+        return MaterialPageRoute(builder: (_)=>  SearchFlight());
+      case RouteNames.settingsPage:
+        return MaterialPageRoute(builder: (_)=>  SettingsPage());
+      case RouteNames.languagePage:
+        return MaterialPageRoute(builder: (_)=>  LanguagePage());
+      case RouteNames.notificationPage:
+        return MaterialPageRoute(builder: (_)=>  NotificationPage());
+      case RouteNames.emailandmobilePage:
+        return MaterialPageRoute(builder: (_)=>  EmailAndMobilePage());
+      case RouteNames.securitysetting:
+        return MaterialPageRoute(builder: (_)=> SecuritySetting());
       default:
         return _errorRoute();
     }

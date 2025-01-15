@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../core/constants/colors.dart';
+
 class StaticDots extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class StaticDots extends StatelessWidget {
           height: 6,
           width: 61,
           decoration: BoxDecoration(
-            color: Colors.blue,
+            color: AppColors.blue,
             borderRadius: BorderRadius.circular(8),
           ),
         ),
