@@ -81,7 +81,7 @@ class DoubleCheck extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
+                 SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
