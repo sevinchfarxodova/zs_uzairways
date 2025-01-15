@@ -16,3 +16,4 @@ class Arrow2 extends StatelessWidget {
       size: 28.0,
     ));
   }}
+
